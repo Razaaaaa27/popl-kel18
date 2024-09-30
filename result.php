@@ -84,7 +84,7 @@ h1.lilita-one-regular1 {
   font-size: 3vw; /* Ukuran teks responsif */
   font-weight: 700;
   text-align: left; /* Mengatur teks agar rata kiri */
-  margin-bottom: 300px;
+  margin-bottom: 200px;
 
   color: var(--primary-color);
 }
@@ -107,31 +107,38 @@ h1.lilita-one-regular1 {
   }
 
   .form-group {
-    margin-bottom: 24px;
-    
-  }
+      margin-bottom: 1px;
 
-  .container1 {
-      max-width: 100%;
+    }
+
+    .container1 {
+      max-width: 5%;
+      
       display: flex;
       flex-direction: column;
       align-items: stretch;
-      font-size: 20px; 
-      transform: translate(300px);
+      font-size: 14px; 
+      transform: translate(30px);
+      transform: translate(-200px);
+    }
+
+    .card {
+      flex: 1;
+      margin: 10px;
+       padding: 50px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 1300%;
+      max-width: 800px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+     .label {
+      width: 10%;
+      font-size: 1.em;
+      text-align: left;
     }
     
-    .card {
-    flex: 1; /* Mengizinkan kartu untuk mengisi ruang yang tersedia */
-    margin: 10px; /* Margin antar kartu */
-    padding: 60px; /* Padding di dalam kartu */
-    border: 1px solid #ccc; /* Garis batas untuk kartu */
-    border-radius: 8px; /* Sudut melingkar */
-    width: 100%; /* Kartu akan mengambil lebar penuh dari kontainer */
-    max-width: 800px; /* Atur lebar maksimum kartu menjadi 800px */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1), 0 0 20px rgba(255, 255, 255, 0.6); /* Bayangan berwarna putih bersinar */
-    font-size: 20px;
-}
-
 .card1 {
   flex: 1; /* Mengizinkan kartu untuk mengisi ruang yang tersedia */
   margin: 10px; /* Margin antar kartu */
@@ -145,12 +152,7 @@ font-size: 25px;
 margin-top: -200px;
 }
 
-/* Mengatur label agar lebih panjang */
-.label {
-  width: 100%; /* Membuat label menjadi lebar 100% */
-  font-size: 1.2em; /* Ukuran font untuk label */
-  text-align: left; /* Rata kiri untuk label */
-}
+
 
 @media (max-width: 768px) {
   .card {
@@ -231,12 +233,12 @@ margin-top: -200px;
     <div id="viewport" class="l-viewport">
       <div class="l-wrapper">
       <header class="header">
-            <a style="margin-left: -150px;" class="header--logo" href="#0">
-              <img src="assets/img/logo.png" alt="Global">
+            <a style="margin-left: -10px;" class="header--logo" href="#0">
+              <img src="assets/img/logo.png" alt="KREDITRUST">
               <p>KREDITRUST</p>
             </a>
 
-            <div style="margin-right: -150px;" class="header--nav-toggle">
+            <div style="margin-right: -10px;" class="header--nav-toggle">
               <span></span>
             </div>
 

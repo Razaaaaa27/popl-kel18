@@ -240,6 +240,17 @@ body {
   color: black;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
+ 
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    width: 100%; /* Ubah lebar body ke 100% */
+    max-width: 100vw; /* Pastikan tidak melebihi lebar layar */
+    margin: 0 auto; /* Menjaga konten tetap di tengah */
+    padding: 0; /* Pastikan tidak ada padding yang menambah lebar */
+    box-sizing: border-box; /* Agar padding dan border tidak menambah ukuran elemen */
+  }
 }
 
 .l-viewport {
