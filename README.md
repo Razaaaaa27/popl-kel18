@@ -1,4 +1,4 @@
-# [KrediTrust - Sistem Penentuan Pemberian Kredit
+# [KrediTrust - Sistem Penentuan Pemberian Kredit]
 
 **KrediTrust** adalah sebuah aplikasi berbasis web yang dirancang untuk membantu lembaga keuangan dalam menilai kelayakan pengajuan kredit dari calon debitur. Sistem ini menggunakan sejumlah parameter seperti usia, status pernikahan, pekerjaan, penghasilan, dan jaminan untuk membuat keputusan secara objektif apakah kredit layak diterima atau ditolak.
 
