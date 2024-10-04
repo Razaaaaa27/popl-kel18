@@ -42,7 +42,7 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         push: true
-        tags: razaadzani/pratikum_popl4:latest
+        tags: razaadzani/popl-kelompok18:latest
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
