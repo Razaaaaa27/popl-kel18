@@ -43,6 +43,8 @@ jobs:
       with:
         push: true
         tags: razaadzani/popl-kelompok18:latest
+        context: ./docker
+
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
