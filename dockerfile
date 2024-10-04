@@ -1,10 +1,13 @@
 FROM php:7.4-apache
 
+WORKDIR /app
 
-COPY . /var/www/html/
+COPY go.mod ./
+COPY *.go ./
+COPY static ./static
 
+RUN go build -o /belajar-cicd-pemula
 
-RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 755 /var/www/html
+EXPOSE 3000
 
-CMD ["apache2-foreground"]
+CMD ["/belajar-cicd-pemula"]
