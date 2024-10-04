@@ -1,0 +1,13 @@
+{
+    "name": "raza/kreditrust",
+    "description": "sistem penentuan pe,berian kredit",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Muhammad Raza Adzani",
+            "email": "raza.a22@mhs.usk.ac.id"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
