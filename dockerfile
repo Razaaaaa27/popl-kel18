@@ -12,3 +12,6 @@ RUN chown -R www-data:www-data /var/www/html \
 CMD ["apache2-foreground"]
 
 RUN docker-php-ext-install pdo pdo_mysql
+
+RUN docker-php-ext-install pdo pdo_pgsql
+
