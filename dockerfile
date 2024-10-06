@@ -10,3 +10,5 @@ RUN chown -R www-data:www-data /var/www/html \
 
 # Jalankan Apache di foreground, sehingga container tetap berjalan
 CMD ["apache2-foreground"]
+
+RUN docker-php-ext-install pdo pdo_mysql
