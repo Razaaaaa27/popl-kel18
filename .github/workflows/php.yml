@@ -18,7 +18,7 @@ jobs:
         image: mysql:5.7
         env:
           MYSQL_ROOT_PASSWORD: password
-          MYSQL_DATABASE: global_master
+          MYSQL_DATABASE: nama_database
           MYSQL_USER: user
           MYSQL_PASSWORD: password
         options: >-
@@ -26,10 +26,8 @@ jobs:
           --health-interval=10s
           --health-timeout=5s
           --health-retries=3
-           ports:
-          - "2341:80"  # Teruskan port 80 ke port 2341
-          depends_on:
-          - mysql
+        ports:
+          - 3306:80
 
     steps:
     - uses: actions/checkout@v4
