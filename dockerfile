@@ -1,6 +1,9 @@
 # Menggunakan image PHP versi 7.4 dengan Apache sebagai server web
 FROM php:7.4-apache
 
+# Install PDO dan MySQL
+RUN docker-php-ext-install pdo pdo_mysql
+
 # Copy semua file dari folder project ke folder /var/www/html/ di dalam container
 COPY . /var/www/html/
 
@@ -10,7 +13,3 @@ RUN chown -R www-data:www-data /var/www/html \
 
 # Jalankan Apache di foreground, sehingga container tetap berjalan
 CMD ["apache2-foreground"]
-
-RUN docker-php-ext-install pdo pdo_mysql
-
-RUN docker-php-ext-enable pdo_mysql
