@@ -49,7 +49,7 @@ jobs:
       with:
         context: .  # Mengacu ke root folder tempat Dockerfile berada
         push: true
-        tags: razaadzani/praktikum_popl5:latest
+        tags: razaadzani/praktikum_popl4:latest
         
 
 
