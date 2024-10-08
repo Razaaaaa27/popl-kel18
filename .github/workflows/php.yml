@@ -10,9 +10,24 @@ permissions:
   contents: read
 
 jobs:
-  build: 
-
+  build:
     runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: global_master
+          MYSQL_USER: user
+          MYSQL_PASSWORD: password
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+        ports:
+          - 3306:3306
 
     steps:
     - uses: actions/checkout@v4
@@ -32,29 +47,25 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
 
-    - name: Login to Doker Hub
+    - name: Wait for MySQL to be ready
+      run: |
+        until mysqladmin ping -h "127.0.0.1" --silent; do
+          echo "Waiting for database connection..."
+          sleep 2
+        done
+
+    - name: Login to Docker Hub
       uses: docker/login-action@v3
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    # - name: Build and push
-    #   uses: docker/build-push-action@v6
-    #   with:
-    #     push: true
-    #     tags: razaadzani/popl-kelompok18:latest
-
-    - name: Build and push Docker imag
+    - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
         context: .  # Mengacu ke root folder tempat Dockerfile berada
         push: true
         tags: razaadzani/praktikum_popl4:latest
-        
-
-
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
 
     # - name: Run test suite
     #   run: composer run-script test
