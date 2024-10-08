@@ -26,8 +26,10 @@ jobs:
           --health-interval=10s
           --health-timeout=5s
           --health-retries=3
-        ports:
-          - 3306:3306
+           ports:
+          - "2341:80"  # Teruskan port 80 ke port 2341
+          depends_on:
+          - mysql
 
     steps:
     - uses: actions/checkout@v4
