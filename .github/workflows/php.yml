@@ -18,7 +18,7 @@ jobs:
         image: mysql:5.7
         env:
           MYSQL_ROOT_PASSWORD: password
-          MYSQL_DATABASE: nama_database
+          MYSQL_DATABASE: global_master
           MYSQL_USER: user
           MYSQL_PASSWORD: password
         options: >-
