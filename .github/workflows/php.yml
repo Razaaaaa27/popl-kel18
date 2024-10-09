@@ -63,11 +63,11 @@ jobs:
           web:
             image: ${{ secrets.DOCKERHUB_USERNAME }}/praktikum_popl4:latest
             ports:
-              - "80:80"
+              - "8080:80"
             depends_on:
               - mysql
             environment:
-              - DB_HOST=mysql
+              - DB_HOST=localhost
               - DB_USER=root
               - DB_PASSWORD=${{ secrets.DB_PASSWORD }}
               - DB_NAME=global_master
