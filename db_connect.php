@@ -1,5 +1,5 @@
 <?php
-$host = 'mysql'; // Nama service MySQL di docker-compose
+$host = '127.0.0.1'; // Nama service MySQL di docker-compose
 $dbname = 'global_master';
 $username = 'root';
 $password = 'your_password'; // Ganti dengan password yang aman
