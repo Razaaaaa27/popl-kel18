@@ -46,7 +46,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         font-weight: 400;
         font-style: normal;
     }
-
     .lilita-one-regular1 {
         font-family: "Lilita One", sans-serif;
         font-weight: 400;
