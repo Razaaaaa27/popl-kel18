@@ -1,13 +1,13 @@
 <?php
-$host = '192.168.1.11'; // Nama service MySQL yang Anda definisikan di docker-compose
+$host = 'localhost'; 
 $dbname = 'global_master';
 $username = 'root';
-$password = 'your_password'; // Ganti dengan password yang sesuai
+$password = 'your_password'; 
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // echo "Connected successfully";
+  
 } catch (PDOException $e) {
     die("Koneksi database gagal: " . $e->getMessage());
 }
