@@ -61,7 +61,7 @@ jobs:
 
         services:
           web:
-            image: ${{ secrets.DOCKERHUB_USERNAME }}/praktikum_pop14:latest
+            image: ${{ secrets.DOCKERHUB_USERNAME }}/praktikum_pop18:latest
             ports:
               - "8080:80"
             depends_on:
