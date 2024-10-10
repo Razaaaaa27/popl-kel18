@@ -97,7 +97,6 @@ h1.lilita-one-regular1 {
   }
 }
 
-
   p {
     font-size: 20px;
     font-weight: 700;
