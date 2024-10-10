@@ -77,9 +77,7 @@ Skor akhir akan dibandingkan dengan ambang batas, dan keputusan kredit akan dibe
 
 Proyek ini dikembangkan oleh Kelompok 8:
 
-- Zahra Zafira - 2208107010040
-- Alfi Zamriza - 2208107010080
-- Muhammad Khalid Al Ghifari - 2208107010044
+- Maulana Fikri - 2208107010042
 - Muhammad Raza Adzani - 2208107010066
 
 ##Kesimpulan
