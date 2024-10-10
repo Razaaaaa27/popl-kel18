@@ -161,8 +161,6 @@ margin-top: -200px;
   }
 }
 
-
-
   input[type="text"],
   input[type="number"],
   select {
@@ -382,8 +380,6 @@ margin-top: -200px;
     </div>
             </div>
           </li>
-
-
 
           <li class="l-section section">
             <div class="about">
