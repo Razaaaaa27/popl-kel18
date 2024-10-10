@@ -1,5 +1,5 @@
 <?php
-$host = 'localhost'; 
+$host = '172.29.208.1'; 
 $dbname = 'global_master';
 $username = 'root';
 $password = 'your_password'; 
