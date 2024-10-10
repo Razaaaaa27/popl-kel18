@@ -89,7 +89,6 @@ h1.lilita-one-regular1 {
   color: var(--primary-color);
 }
 
-
 @media (max-width: 600px) {
   h1.lilita-one-regular {
     text-align: left; /* Tetap rata kiri pada layar kecil */
