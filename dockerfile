@@ -1,21 +1,15 @@
-# Menggunakan image PHP versi 7.4 dengan Apache sebagai server web
-FROM php:7.4-apache
+from nginx:alpine
 
-# Instal ekstensi pdo_mysql yang dibutuhkan untuk koneksi database MySQL
-RUN docker-php-ext-install pdo pdo_mysql
+# copy html php js files
+copy *.html /usr/share/nginx/html/
+copy *.php /usr/share/nginx/html/
+copy *.js /usr/share/nginx/html/
 
-# Menyalin file project ke folder /var/www/html/ di dalam container
-COPY . /var/www/html/
- 
-# Setel permission agar file dapat diakses oleh server Apache di dalam container
-RUN chown -R www-data:www-data /var/www/html \
-    && chmod -R 755 /var/www/html
+# copy the sql script or mysql folder (optional)
+copy ./database/*.sql /docker-entrypoint-initdb.d/
 
-# Membuka port 8080 agar sesuai dengan Cloud Run
-EXPOSE 8080
+# expose nginx port
+expose 80
 
-# Konfigurasi Apache agar mendengarkan port 8080
-RUN sed -i 's/80/8080/g' /etc/apache2/ports.conf /etc/apache2/sites-available/*.conf
-
-# Jalankan Apache di foreground agar container tetap berjalan
-CMD ["apache2-foreground"]
+# start nginx
+cmd ["nginx", "-g", "daemon off;"]
