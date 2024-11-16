@@ -8,7 +8,7 @@ COPY . /var/www/html/
 RUN chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
 
 # Expose port 80 untuk Cloud Run
-EXPOSE 80
+EXPOSE 8080
 
 # Jalankan server
 CMD ["apache2-foreground"]
