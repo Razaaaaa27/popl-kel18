@@ -16,3 +16,4 @@ EXPOSE 80
 
 # Jalankan Apache di foreground agar container tetap berjalan
 CMD ["apache2-foreground"]
+
