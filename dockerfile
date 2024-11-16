@@ -1,14 +1,10 @@
-# Gunakan image PHP resmi
-FROM php:8.2-apache
+FROM nginx:alpine
 
-# Salin semua file aplikasi Anda ke direktori kerja
-COPY . /var/www/html/
+COPY *.html /usr/share/nginx/html/
+COPY *.css /usr/share/nginx/html/
+COPY *.js /usr/share/nginx/html/
 
-# Pastikan izin file benar
-RUN chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
+ENV PORT 80
+EXPOSE 80
 
-# Expose port 80 untuk Cloud Run
-EXPOSE 8080
-
-# Jalankan server
-CMD ["apache2-foreground"]
+CMD ["nginx", "-g", "daemon off;"]
