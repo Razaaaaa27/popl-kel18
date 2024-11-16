@@ -12,7 +12,9 @@ RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
 
 # Membuka port 80 agar aplikasi bisa diakses melalui localhost
+ENV PORT 80
 EXPOSE 80
+
 
 # Jalankan Apache di foreground agar container tetap berjalan
 CMD ["apache2-foreground"]
